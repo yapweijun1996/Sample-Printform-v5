@@ -481,26 +481,23 @@ function printform_process(){
 			// Last Page Footer [start] 
 			current_page_height = 0;
 			
-			addHeader(pheader, pformat);
-			if(repeat_header == "y"){
-				
-			}else{
-				current_page_height += ph_height;
-			}
 			
-			addDocInfo(pdocinfo, pformat);
+			if(repeat_header == "y"){
+				addHeader(pheader, pformat);
+			}else{
+				
+			}
 			
 			if(repeat_docinfo == "y"){
-				
+				addDocInfo(pdocinfo, pformat);
 			}else{
-				current_page_height += pdi_height;
+				
 			}
 			
-			addRowHeader(prowheader, pformat);
 			if(repeat_rowheader == "y"){
-				
+				addRowHeader(prowheader, pformat);
 			}else{
-				current_page_height += prh_height;
+				
 			}
 			
 			if(repeat_footer == "y"){
